@@ -26,6 +26,8 @@
 
 			p {
 				padding-bottom: : 20px;
+				font-size:110%;
+				line-height: 1.4;
 			}
 
 			a: visited {
@@ -41,6 +43,10 @@
 
 			}
 
+			h1 {
+				font-size: 50px;
+				letter-spacing: 0.4em;
+			}
 			nav {
 
 				margin-bottom: 60px;
