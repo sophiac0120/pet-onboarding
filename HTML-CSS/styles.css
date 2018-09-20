@@ -36,8 +36,8 @@ body {
 
 header {
 	background-image: url(mini_waves.png);
-	width: 250px;
-	border: 1px dashed black;
+	border: 0.3px dashed black;
+	height: 50px;
 }
 
 #contents_id {
@@ -86,12 +86,27 @@ a:hover, a:active {
     color: blue;
 }
 
-ul { 
+header li { 
 	list-style: none; 
+	margin: 0;
+	padding: 15px 0 0 8px;
+	width: 220px;
+	text-align: center;
+	float: left;
+
 }  
 
-ul li:before { 
+.sidebar li{ 
 	content:"•"; font-size:10pt; 
+}
+
+nav li {
+  counter-increment: step-counter;
+}
+
+nav li::before {
+  content: counter(step-counter)'.';
+  margin-right: 5px;
 }
 
 
@@ -155,6 +170,7 @@ blockquote{
 	margin: 0px;
 	background: url(quote-left.png) top left no-repeat, url(quote-right.png) bottom right no-repeat;
 	background-size: 40px 40px;
+	clear: both;
 }
 
 #gills {
