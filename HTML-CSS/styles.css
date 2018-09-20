@@ -1,5 +1,17 @@
 html {
 	font-size: 1em;
+	box-sizing: border-box;
+}
+
+*, *: before, *:after {
+	 box-sizing: inherit ;
+}
+
+.sidebar{
+	width: 300px;
+	background-image: linear-gradient(white, #E8EAF2);
+	float:right;
+
 }
 body {
 	margin: 150px 200px 40px 200px;
@@ -9,6 +21,17 @@ body {
 	background-position: left 10px top 10px;
 	background-attachment: fixed;
 	font-family: Geneva, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.clr: after {
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+#furtherR{
+	clear: both;
 }
 
 header {
@@ -31,9 +54,10 @@ header {
 }
 
 .wrapper {
-	margin-top: 30px;
-	padding: 20px;
-	background-image: linear-gradient(#ffffff, #606060);
+	margin: 0 auto 0 auto;
+	width: 980px;
+	padding: 100px;
+	background-image: linear-gradient(#ffffff, lightblue);
 }
 
 p {
@@ -42,13 +66,17 @@ p {
 	line-height: 1.4;
 }
 
+p.first{
+	padding-top: 30px;
+}
+
 div p:first-of-type:first-letter { 
 	font-weight: bold;
 	font-size: 140%;
  }
 
 a:link, a:visited {
-    color: white;
+    color: black;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
@@ -66,9 +94,6 @@ ul li:before {
 	content:"•"; font-size:10pt; 
 }
 
-aside {
-	clear: both;
-}
 
 h1 {
 	font-size: 5em;
@@ -85,11 +110,13 @@ nav {
 th, td {
     padding: 15px;
     text-align: left;
+    border: 1px solid black;
     border-bottom: 1px solid black;
 }
 
-h3.special {
-	text-shadow: black 20px 5px 30px;
+h3.shadow {
+	font-size: 2em;
+	text-shadow: darkblue 20px 5px 30px;
 }
 
 h3{
@@ -98,6 +125,7 @@ h3{
 
 #summary{
 	margin-bottom: 60px;
+	clear: both;
 }
 
 caption{
@@ -109,7 +137,7 @@ table {
 }
 
 .classification tr:first-child{
-	background-color: darkgray;
+	background-color: #f0f0f0;
 
 }
 
@@ -141,6 +169,13 @@ blockquote{
 	padding-top: 200px;
 }
 
-article {
+
+.content {
+	float: left;
+	width: 600px;
+	background-image: linear-gradient(white, #E8EAF6);
+}
+
+#tax {
 	clear: both;
 }
