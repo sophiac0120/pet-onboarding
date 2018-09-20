@@ -227,3 +227,38 @@ footer{
 	font-size: 0.8rem;
 }
 
+.forms{
+	padding: 20px;
+}
+
+.forms label{
+	float:left;
+	width: 40%;
+}
+
+.forms div{
+	clear: left;
+	margin: 0 0 0.5em 0;
+}
+
+.forms .radio{
+	border: none;
+	width: 100%;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+.forms input[type="text"], .forms input[type="email"], .forms textarea {
+	width: 55%;
+}
+
+.forms .radio label{
+	float: none;
+}
+
+.forms .radio legend{
+	float: left;
+	width: 40%;
+	margin: 0;
+	padding: 0;
+}
