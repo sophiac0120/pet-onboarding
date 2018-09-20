@@ -134,6 +134,7 @@ caption{
 
 table {
 	margin-bottom: 40px;
+	width: 300px;
 }
 
 .classification tr:first-child{
