@@ -236,20 +236,45 @@ footer{
 	width: 40%;
 }
 
+.radio {
+	border: none;
+	clear: left;
+	margin: 0 0 0.5em 0;
+	background-color: #e8f7ff;
+	padding: 0.5em;
+	border-radius: 0.5em;
+
+}
+
 .forms div{
 	clear: left;
 	margin: 0 0 0.5em 0;
-}
-
-.forms .radio{
-	border: none;
-	width: 100%;
-	margin: 0 0 0.5em 0;
-	padding: 0;
+	background-color: #e8f7ff;
+	padding: 0.5em;
+	border-radius: 0.5em;
 }
 
 .forms input[type="text"], .forms input[type="email"], .forms textarea {
 	width: 55%;
+	border: 2px solid #cccccc;
+	font: 100% Arial, Helvetica, sans-serif;
+}
+
+.forms input[type="submit"]{
+	box-shadow: 2px 2px 5px rgba(78, 83, 10, 0.6);
+}
+
+.forms input[type="submit"]:hover{
+	font-size: 1.2rem;
+	border: 1px solid #cccccc;
+	background-color: white;
+	border-radius: 0.2em;
+	padding: 0.2em 1em 0.2em 1em;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.forms select, .forms input[type="photo"]{
+	font-size: 1.5rem;
 }
 
 .forms .radio label{
@@ -261,4 +286,9 @@ footer{
 	width: 40%;
 	margin: 0;
 	padding: 0;
+}
+
+.buttons{
+	background-color: transparent;
+	text-align: center;
 }
