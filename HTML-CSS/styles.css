@@ -127,12 +127,6 @@ nav li {
   counter-increment: step-counter;
 }
 
-nav li::before {
-  content: counter(step-counter)'.';
-  margin-right: 5px;
-}
-
-
 h1 {
 	font-size: 5em;
 	letter-spacing: 0.4em;
@@ -254,10 +248,26 @@ footer{
 	border-radius: 0.5em;
 }
 
-.forms input[type="text"], .forms input[type="email"], .forms textarea {
+.forms input[type="text"], 
+.forms input[type="email"],
+.forms textarea {
 	width: 55%;
 	border: 2px solid #cccccc;
 	font: 100% Arial, Helvetica, sans-serif;
+	padding: 0.3em;
+}
+
+.forms input[type="text"]:focus, 
+.forms input[type="email"]:focus,
+.forms textarea:focus {
+	border: 2px solid rgb(129,129,241);
+	box-shadow: 2px 2px 5px rgba(255,0,0, 0.4);
+}
+
+.forms input[type="text"]:focus:invalid, 
+.forms input[type="email"]:focus:invalid{
+	border: 2px solid red;
+	box-shadow: 2px 2px 5px rgba(129,129,241, 0.4);
 }
 
 .forms input[type="submit"]{
@@ -291,4 +301,8 @@ footer{
 .buttons{
 	background-color: transparent;
 	text-align: center;
+}
+
+.req{
+	color: red;
 }
