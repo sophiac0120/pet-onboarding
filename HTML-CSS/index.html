@@ -4,6 +4,8 @@
 		<title>Fish</title>
 		<link rel="stylesheet" href="styles.css">
 		<meta charset="utf-8">
+		<script type="text/javascript" src="audio-player.js"></script>
+
 		
 	</head>
 
@@ -183,6 +185,17 @@
 					<input type="submit">
 				</div>
 			</form >
+
+
+			<audio controls preload="auto">
+				<source src="audiofile.mp3"><type="audio/mpeg">
+				<source src="audiofile.mp3"><type="audio/ogg">
+			</audio>
+
+			<video controls width="300" height="160" preload="auto" poster="poster.png">
+				<source src="fish-video.mp4" type="video/webm">
+				<source src="fish-video.mp4" type="video/mp4">
+			</video>
 		</div>
 
 		<footer class="clr">
