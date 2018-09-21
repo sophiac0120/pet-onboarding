@@ -33,8 +33,12 @@ body {
 
 }
 
-#furtherR{
+.clr{
 	clear: both;
+}
+
+#furtherR{
+	margin-bottom: 40px;
 }
 
 header {
@@ -114,8 +118,8 @@ header .links a:link, header .links a:visited {
 }
 
 header .links a:hover, a:active{
-		color: white;
-		background-color: darkgray;
+	color: white;
+	background-color: darkgray;
 }
 
 
@@ -153,6 +157,7 @@ h3.shadow {
 
 h3{
 	font-size: 3em;
+	clear: both;
 }
 
 #summary{
@@ -272,10 +277,10 @@ footer{
 
 .forms input[type="submit"]{
 	box-shadow: 2px 2px 5px rgba(78, 83, 10, 0.6);
+	font-size: 1.3rem;
 }
 
 .forms input[type="submit"]:hover{
-	font-size: 1.2rem;
 	border: 1px solid #cccccc;
 	background-color: white;
 	border-radius: 0.2em;
@@ -306,3 +311,49 @@ footer{
 .req{
 	color: red;
 }
+
+
+img{
+	max-width: 100%;
+}
+
+video{
+	max-width: 100%;
+}
+
+.box {
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	margin: 0 0 1em 0;
+}
+
+@media screen and (min-width: 700px) {
+	.main {
+		float: left;
+		width: 65%;
+	}
+
+	.sub {
+		float: right;
+		width: 30%;
+	}
+
+	.sidebar {
+		float: right;
+		width: 220;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

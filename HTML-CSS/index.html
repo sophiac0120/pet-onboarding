@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<meta charset="utf-8">
 		<script type="text/javascript" src="audio-player.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		
 	</head>
@@ -29,7 +30,7 @@
 
 
 			<article class="content">
-				<h3 class="shadow">Rat Infestation Takes a Toll on Nearby Coral Reefs</h3>
+				<h3 class="shadow clr">Rat Infestation Takes a Toll on Nearby Coral Reefs</h3>
 				<p>When humans set forth on the seas to explore new lands, they often bring with them unintended stowaways: rats. If the animals gain a foothold on an island, they can devastate local fauna. And a study published yesterday (July 11) in Nature finds that the rodents’ destruction extends into the seas surrounding islands, starving the ecosystems around coral reefs of nutrients.</p>
 
 				<p>“The depth of this research shows just how much ecosystems impacted by invasive rats have to lose,” Holly Jones of Northern Illinois University who was not involved in the study tells The Atlantic. </p>
@@ -43,7 +44,7 @@
 			</article>
 
 			<aside class="sidebar">
-				<h3>Read more articles</h3>
+				<h3 class="clr">Read more articles</h3>
 				<li><a href="https://www.sciencedaily.com/releases/2013/08/130808123719.htm">Do Fish Feel Pain?</a></li>
 				<li><a href="https://web.archive.org/web/20180120000911/https://swfsc.noaa.gov/news.aspx?ParentMenuId=39&id=20466">Warm Blood Makes Opah Predator</a></li>
 				<li><a href="https://www.sciencedaily.com/releases/2013/08/130808123719.htm">More</a></li>
@@ -126,7 +127,7 @@
 		(1) – operculum (gill cover), (2) – lateral line, (3) – dorsal fin, (4) – fat fin, (5) – caudal peduncle, (6) – caudal fin, (7) – anal fin, (8) – photophores, (9) – pelvic fins (paired), (10) – pectoral fins (paired)</figcaption>
 				</figure>
 				<div id="gills">
-					<h3>Gills</h3>
+					<h3 class="clr">Gills</h3>
 					<p>Most fish exchange gases using gills on either side of the pharynx. Gills consist of threadlike structures called filaments. Each filament contains a capillary network that provides a large surface area for exchanging oxygen and carbon dioxide. Fish exchange gases by pulling oxygen-rich water through their mouths and pumping it over their gills. In some fish, capillary blood flows in the opposite direction to the water, causing countercurrent exchange. The gills push the oxygen-poor water out through openings in the sides of the pharynx. Some fish, like sharks and lampreys, possess multiple gill openings. However, bony fish have a single gill opening on each side. This opening is hidden beneath a protective bony cover called an operculum. Juvenile bichirs have external gills, a very primitive feature that they share with larval amphibians.</p>
 				</div>
 				<figure id="gills_img_fig">
@@ -135,15 +136,32 @@
 
 			</nav>
 
-			<aside id="furtherR">
+			<aside id="furtherR" class="clr">
 				<h2>Further reading</h2>
 				<li>Helfman, G.; Collette, B.; Facey, D.; Bowen, B. (2009). The Diversity of Fishes: Biology, Evolution, and Ecology (2nd ed.). Wiley-Blackwell. ISBN 978-1-4051-2494-2.
 				<li>Moyle, Peter B. (1993) Fish: An Enthusiast's Guide University of California Press. ISBN 9780520916654 – good lay text.
 				<li>Shubin, Neil (2009) Your inner fish: A journey into the 3.5 billion year history of the human body Vintage Books. ISBN 9780307277459. UCTV interview
 			</aside>
+
+			<div class="box sub">
+				<h2>Audio</h2>
+			<audio controls preload="auto">
+				<source src="audiofile.mp3"><type="audio/mpeg">
+				<source src="audiofile.mp3"><type="audio/ogg">
+			</audio>
+			</div>
+			<div class="box main">
+				<h2>Video</h2>
+			<video controls width="900" height="160" preload="auto" poster="poster.png">
+				<source src="fish-video.mp4" type="video/webm">
+				<source src="fish-video.mp4" type="video/mp4">
+			</video>
+		</div>
+
+
 		
 
-			<h3>Contact Us</h3>
+			<h3 class="clr">Contact Us</h3>
 			<form action="send-email.php" method="post" id="contactform" enctype="multipart/form-data" class="forms">
 				<p><span class="req">*</span> Indicates required fields</p>
 				<div><label for="firstname">First name : <span class="req">*</span></label>
@@ -184,18 +202,8 @@
 					<input type="hidden" name="form" value="contact_form">
 					<input type="submit">
 				</div>
-			</form >
+			</form>
 
-
-			<audio controls preload="auto">
-				<source src="audiofile.mp3"><type="audio/mpeg">
-				<source src="audiofile.mp3"><type="audio/ogg">
-			</audio>
-
-			<video controls width="300" height="160" preload="auto" poster="poster.png">
-				<source src="fish-video.mp4" type="video/webm">
-				<source src="fish-video.mp4" type="video/mp4">
-			</video>
 		</div>
 
 		<footer class="clr">
