@@ -37,6 +37,41 @@ document.querySelector('p').style.backgroundColor = 'darkgray';
 document.querySelector('p').style.color = 'white';
 
 //document.querySelector('.container: last-child').style.backgroundColor = 'lightblue';
-document.querySelector('.card:last-child').style.backgroundColor = 'lightblue';
+document.querySelector('.container:last-child').style.backgroundColor = 'lightblue';
 //document.querySelector('.card:nth-child(2)').style.backgroundColor = 'black';
 
+// const cards = document.getElementsByClassName('card');
+// console.log(cards);
+// console.log(cards[0]); 
+
+// const cardsQuery = document.querySelector('img').getElementsByClassName('card');
+// console.log(cardsQuery);
+
+// const listItems = document.querySelector('ul').getElementsByClassName('listItem');
+// console.log(listItems);
+
+let lis = document.getElementsByTagName('li');
+console.log(lis);
+console.log(lis [0]); 
+
+lis = Array.from(lis);
+lis.reverse();
+console.log(lis);
+
+lis.forEach(function(li, index){
+    console.log(li.className);
+    li.textContent = (`${index}: Hello `);
+});
+
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even');
+
+liOdd.forEach(function(li, index){
+    li.style.background = "#ccc";
+    li.textContent = 'Odd Entry';
+});
+
+liEven.forEach(function(li, index){
+    li.style.background = "darkgrey";
+    li.textContent = 'Even Entry';
+});

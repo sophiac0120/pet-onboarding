@@ -22,3 +22,6 @@ img{
     max-width: 100%;
 }
 
+.task-lists{
+    clear: both;
+}
