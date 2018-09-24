@@ -121,7 +121,7 @@ document.querySelector('ul').appendChild(li);
 console.log(li);
 
 //Replace DOM element
-const newHeading = document.createElement('h3');
+const newHeading = document.createElement('h4');
 
 newHeading.id = 'fish-header';
 newHeading.appendChild(document.createTextNode('Giant Grouper Fish'));
@@ -155,3 +155,45 @@ linkA.setAttribute('title', 'Google');
 val4 = linkA.hasAttribute('title');
 linkA.removeAttribute('title');
 val4 = linkA;
+
+/* document.querySelector('.listItem').addEventListener('click', 
+function(e){
+    console.log('Hello World');
+    e.preventDefault(); 
+}); */
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+    console.log('Clicked');
+    let val;
+
+    val = e;
+    val = e.target.classList;
+    e.target.innerText = 'Clicked';  
+    val = e.type;
+    
+    val = e.timeStamp;
+    val = e.clientY; // Coordinates relative to the window Vertical axis
+    val = e.offsetY; // relative to the element  
+
+
+
+    console.log(val);
+};
+
+const clearBtn = document.querySelector('.clear-tasks');
+const firstCard = document.querySelector('.card');
+const heading = document.querySelector('h3');
+
+//clearBtn.addEventListener('click', runEvent);
+clearBtn.addEventListener('dblclick', runEvent);
+firstCard.addEventListener('mouseenter', runEvent);
+firstCard.addEventListener('mouseleave', runEvent);
+
+function runEvent(e){
+    console.log(`Event Type ${e.type}`);
+
+    heading.textContent =  `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40  )`;
+}
