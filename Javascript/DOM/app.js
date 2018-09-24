@@ -87,7 +87,7 @@ console.log(val4);
 //Get childern element nodes;
 val4 = list.children;
 val4 = list.children[1];
-list.children[1].textContent = "Odd Entry with content updated";
+//list.children[1].textContent = "Odd Entry with content updated";
 
 val4 = list.firstChild;
 console.log(val4);
@@ -140,7 +140,7 @@ list2.removeChild(lis2[1]); */
 
 //Classes & Attributes
 const firstLi = document.querySelector('li:first-child');
-const linkA = firstLi.children[0];
+/* const linkA = firstLi.children[0];
 
 val4 = linkA.className;
 val4 = linkA.classList;
@@ -154,7 +154,7 @@ val4 = linkA.setAttribute('href', 'http://google.com');
 linkA.setAttribute('title', 'Google');
 val4 = linkA.hasAttribute('title');
 linkA.removeAttribute('title');
-val4 = linkA;
+val4 = linkA; */
 
 /* document.querySelector('.listItem').addEventListener('click', 
 function(e){
@@ -187,13 +187,38 @@ const firstCard = document.querySelector('.card');
 const heading = document.querySelector('h3');
 
 //clearBtn.addEventListener('click', runEvent);
-clearBtn.addEventListener('dblclick', runEvent);
-firstCard.addEventListener('mouseenter', runEvent);
-firstCard.addEventListener('mouseleave', runEvent);
+//clearBtn.addEventListener('dblclick', runEvent);
+//firstCard.addEventListener('mouseenter', runEvent);
+//firstCard.addEventListener('mouseleave', runEvent);
 
-function runEvent(e){
+/* function runEvent(e){
     console.log(`Event Type ${e.type}`);
 
     heading.textContent =  `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40  )`;
+    //User input value
+    console.log(taskInput.value);
+    e.preventDefault();
+} */
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+taskInput.value = '';
+//form.addEventListener('submit', runEvent);    
+
+
+//const delItem = document.querySelector('.delete-item');
+//delItem.addEventListener('click', deleteItem);
+
+console.log("BIDD");
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e){
+      
+    if (e.target.parentElement.classList.contains('delete-item')){
+        console.log('delete-item');
+        console.log(e.target.parentElement.parentElement);
+        e.target.parentElement.parentElement.remove();  
+
+    }
 }
