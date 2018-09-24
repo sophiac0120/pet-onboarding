@@ -1,0 +1,39 @@
+.wrapper {
+    padding: 40px;
+    width: 40%;
+}
+
+h1 {
+    margin-bottom: 30px;
+
+}
+label {
+    margin-left: 5px;
+}
+.task-lists{
+    clear: both;
+    padding: 10px;
+}
+
+ul {
+    margin-bottom: 10px;
+}
+
+form{
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+ul li{
+    display: inline;
+}
+
+i {
+    margin-right: -100%;
+    float:right;
+}
+
+button {
+    margin-top: 5%;
+    float:right;
+}
