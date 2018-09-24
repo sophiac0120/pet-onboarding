@@ -47,7 +47,7 @@ document.querySelector('.container:last-child').style.backgroundColor = 'lightbl
 // const cardsQuery = document.querySelector('img').getElementsByClassName('card');
 // console.log(cardsQuery);
 
-// const listItems = document.querySelector('ul').getElementsByClassName('listItem');
+// const listItem = document.querySelector('ul').getElementsByClassName('listItem');
 // console.log(listItems);
 
 let lis = document.getElementsByTagName('li');
@@ -75,3 +75,28 @@ liEven.forEach(function(li, index){
     li.style.background = "darkgrey";
     li.textContent = 'Even Entry';
 });
+
+let val4;
+
+const list = document.querySelector('ul');
+const listItem= document.querySelectorAll('li.listItem:first-child');
+val4 = listItem;
+val4 = list.childNodes;
+console.log(val4);
+
+//Get childern element nodes;
+val4 = list.children;
+val4 = list.children[1];
+list.children[1].textContent = "Odd Entry with content updated";
+
+val4 = list.firstChild;
+console.log(val4);
+val4 = list.firstElementChild;
+console.log(val4); 
+
+const listItems = document.querySelector('li:first-child');
+val4 = listItems.parentNode;
+val4 = listItems.parentElement;
+val4 = listItems.nextElementSibling.nextElementSibling;
+val4 = listItems.nextElementSibling.nextElementSibling.previousElementSibling;
+console.log(val4);
