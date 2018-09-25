@@ -1,17 +1,24 @@
-document.getElementById('exchange-form').addEventListener('submit', calculateResults);
+document.getElementById('exchange-form').addEventListener('submit', function(e){
+    document.getElementById('results').style.display='none';
 
-function calculateResults(el){    
+    document.getElementById('loading').style.display='block';
+
+    setTimeout(calculateResults, 2000);
+
+    e.preventDefault();
+     
+});
+
+function calculateResults(){    
 
     var e = document.getElementById('currency');
     const curr = e.value;
-    const amount = document.getElementById('amountFrom').textContent;
-    console.log(amount);
+    const amount = document.getElementById('amountFrom').value;
+
     const result = document.getElementById('amountTo');
     const amountFrom = Number(amount);
-    console.log(amountFrom);
-    let calculatedAmount;
 
-    console.log(amountFrom);
+    let calculatedAmount;
 
     if (curr === "USD"){
         console.log('USD');
@@ -21,22 +28,22 @@ function calculateResults(el){
         calculatedAmount = amountFrom * 0.59;
     }
     else {
-        calculatedAmount = amountFrom * 0.66;
+        calculatedAmount = amountFrom * 1.05479;
     }
-    console.log(calculatedAmount);
+    
     if (isFinite(calculatedAmount)){
-        result.value = calculatedAmount.toFixed(2);
+        result.value = calculatedAmount.toFixed(5);
+        document.getElementById('results').style.display='block';
+        document.getElementById('loading').style.display='none';
+
     }else{
         showError('Check your entry');
     }
-
-    e.preventDefault();
-
 } 
 
 function showError(error){
     const errorDiv = document.createElement('div');
-    const card = document.querySelector('.card');
+    const card = document.querySelector('.card-block');
     const heading = document.querySelector('.header');
     errorDiv.className = 'alert alert-danger';
     errorDiv.appendChild(document.createTextNode(error));
@@ -48,5 +55,5 @@ function showError(error){
 }
 
 function clearError(){
-    document.querySelector('.alert').remove; 
+    document.querySelector('.alert').remove(); 
 }
