@@ -1,0 +1,58 @@
+
+.header{
+    text-align: center;
+    height: 45px;
+    margin-bottom: 45px;
+
+}
+
+i{
+    font-size: 20px;
+    margin-top: 10px;
+    float:left;
+}
+h3{
+    font-size: 150%;
+}
+
+.card{
+    background-image: url('header.png');
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+label{
+    float:left;
+}
+
+button:last-child{
+    float:right;
+    clear: both;
+}
+
+form{
+    padding: 5px;
+}
+
+body{
+    background-color: gray;
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+iframe{
+    max-width:"100%";
+    height:"371";
+}
+#loading{
+    margin: 0 auto;
+}
+
+#results{
+    margin-top: 10px;
+}
+
+select {
+    width 
+}
