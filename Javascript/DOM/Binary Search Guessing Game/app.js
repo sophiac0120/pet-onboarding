@@ -1,10 +1,10 @@
 let min = 1,
     max = 21,
     guessesLeft = 5,
-    rand = 19;
+    rand;
  
-//rand = Math.floor((Math.random() * 21) + 1);
-
+rand = Math.floor((Math.random() * 21) + 1);
+console.log(rand);
 
 const game = document.querySelector('.game'),
     minNum = document.querySelector('.min-num'),
@@ -32,9 +32,6 @@ guessBtn.addEventListener('click', function(e){
         else {
             guessesLeft -= 1;
             if (guessesLeft === 0){
-                document.getElementById('down').style.display = 'none';
-
-                document.getElementById('up').style.display ='none';
 
                 gameOver(false, 'You used all the remaining guesses');
             } 
@@ -64,6 +61,8 @@ function notifyUser(err, color){
 }
 
 function gameOver(won, msg){
+    document.getElementById('down').style.display = 'none';
+    document.getElementById('up').style.display ='none';
     if (won === true){
         guessInput.disabled = true;
         guessInput.style.borderColor = 'green';
