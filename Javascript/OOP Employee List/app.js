@@ -42,13 +42,9 @@ UI.prototype.showAlert = function(msg, status){
 }
 
 UI.prototype.deleteEmployee= function(target) {
-    console.log(target);
-    console.log(target.className);
-    console.log(target.parentElement.parentElement.parentElement);
+
     if (target.className === 'fas fa-user-times delete'){
-        console.log("Delete button was clicked");
-        
-        target.parentElement.parentElement.remove(); 
+        target.parentElement.parentElement.parentElement.remove(); 
     }
 }
 
