@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Employee List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Employee</h1>
+        <form id="employee-form">
+            <div>
+                <label for='fullName'>Full Name : </label>
+                <input type='text' id="fullName" class="u-full-width" autocomplete="fullName">
+            </div>
+            <div>
+                <label for='position'>Position :</label>
+                <input type='text' id="position" class="u-full-width">
+            </div>
+            <div>
+                <label for='serialNum'>Serial Number : </label>
+                <input type='text' id="serialNum" class="u-full-width">
+            </div>
+            <div class="clr">
+            <input class="button-primary u-full-width" type="submit" value="Submit">
+            </div>
+    </form>
+        <hr class="clr">
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>position</th>
+                    <th>Serial Number</th>
+                </tr>
+            </thead>
+            <tbody id="employee-list"></tbody>
+        </table>
+    </div>
+    <script src = 'app.js'></script> 
+</body>
+</html>
