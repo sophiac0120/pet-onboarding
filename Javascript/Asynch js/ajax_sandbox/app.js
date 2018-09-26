@@ -3,10 +3,22 @@ const posts = [
     {title: 'Post Two', body: 'This is post two'}
 ];
 
-/* function createPost(post){
-    setTimeout(function(){
-        posts.push(post);
-    }, 2000);
+ function createPost(post){
+
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+            posts.push(post);
+            // resolve();
+            const error = false;
+            
+            if (!error){
+                resolve();
+            } else {
+                reject('Error: Something went wrong!');
+            }
+        }, 2000);
+    });
+
 }
 
 function getPosts(){
@@ -18,9 +30,9 @@ function getPosts(){
         document.body.innerHTML = output;
 
     }, 1000);
-} */
+}
 
-function createPost(post, callback){
+/* function createPost(post){
     setTimeout(function(){
         posts.push(post);
         callback();
@@ -36,5 +48,7 @@ function getPosts(){
         document.body.innerHTML = output;
 
     }, 1000);
-}
-createPost({title: 'Post Three', body: 'This is post three'}, getPosts);
+} */
+createPost({title: 'Post Three', body: 'This is post three'}).then(getPosts).catch(function(err){
+    console.log(err);
+});
