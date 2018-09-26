@@ -1,29 +1,40 @@
-document.getElementById('button').addEventListener('click', loadData);
+const posts = [
+    {title: 'Post One', body: 'This is post one'},
+    {title: 'Post Two', body: 'This is post two'}
+];
 
-function loadData(){
-    const xhr = new XMLHttpRequest();
-    
-/*     xhr.onprogress = function(){
-        console.log('READYSTATE', xhr.readyState);
-    } */
-    
-    xhr.open('GET', 'data.txt', true);
-     xhr.onload = function(){
-        if (this.status === 200){
-            const output = document.getElementById('output');
-            output.innerHTML = `<h1> ${this.responseText} </h1>`;
-        }
-    } 
-
-/*     xhr.onreadystatechange = function() {
-        console.log('READYSTATE', xhr.readyState);
-        if (this.status === 200 && this.readyState === 4){
-            console.log(this.responseText);
-        }
-    } */
-
-    xhr.onerror = function(){
-        console.log('Request error...');
-    }
-    xhr.send();
+/* function createPost(post){
+    setTimeout(function(){
+        posts.push(post);
+    }, 2000);
 }
+
+function getPosts(){
+    setTimeout(function(){
+        let output = '';
+        posts.forEach(function(post){
+            output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+
+    }, 1000);
+} */
+
+function createPost(post, callback){
+    setTimeout(function(){
+        posts.push(post);
+        callback();
+    }, 2000);
+}
+
+function getPosts(){
+    setTimeout(function(){
+        let output = '';
+        posts.forEach(function(post){
+            output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+
+    }, 1000);
+}
+createPost({title: 'Post Three', body: 'This is post three'}, getPosts);
