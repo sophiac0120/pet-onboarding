@@ -60,13 +60,13 @@ document.getElementById('employee-form').addEventListener('submit', function(e){
     if (fullName === '' || position === '' || serialNumber === ''){
         ui.showAlert('Please fill in all fields.', 'error');
     }
-
+    else {
     e.preventDefault();
     ui.addEmployeeToList(employee);
     ui.showAlert('Employee Successfully Added', 'success');
 
     ui.clearFields();
-    
+    }
 });
 
 document.getElementById('employee-list').addEventListener('click', function(e){
