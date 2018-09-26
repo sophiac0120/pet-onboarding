@@ -4,7 +4,6 @@ let min = 1,
     rand;
  
 rand = Math.floor((Math.random() * 21) + 1);
-console.log(rand);
 
 const game = document.querySelector('.game'),
     minNum = document.querySelector('.min-num'),
