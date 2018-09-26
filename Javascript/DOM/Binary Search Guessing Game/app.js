@@ -1,6 +1,6 @@
 let min = 1,
     max = 21,
-    guessesLeft = 3,
+    guessesLeft = 5,
     rand = 19;
  
 //rand = Math.floor((Math.random() * 21) + 1);
@@ -21,23 +21,36 @@ game.addEventListener('mousedown', function(e){
 
 guessBtn.addEventListener('click', function(e){
     let guess = parseInt(guessInput.value);
-    console.log(guess);
-    console.log(rand);
 
     if (guess === NaN || guess < min || guess > max){
         notifyUser(`Please enter a number between ${min} and ${max}!`, 'red');
     }
     else{
-        if (guess == rand){ 
+        if (guess === rand){ 
             gameOver(true,'You made a correct guess');
         }
         else {
             guessesLeft -= 1;
             if (guessesLeft === 0){
+                document.getElementById('down').style.display = 'none';
+
+                document.getElementById('up').style.display ='none';
+
                 gameOver(false, 'You used all the remaining guesses');
-            } else {
+            } 
+            else if (guess > rand){
+                document.getElementById('down').style.display = 'none';
+
+                document.getElementById('up').style.display ='block';
+
                 guessInput.style.borderColor = 'red';
-                notifyUser(`Wrong guess!   Try again! Your remaining guesses left is ${guessesLeft}`, 'blue');}
+                notifyUser(`Wrong guess!   Try again! Your remaining guesses left is ${guessesLeft}`, 'red');
+            }
+            else {
+                document.getElementById('up').style.display = 'none';
+                document.getElementById('down').style.display = 'block';
+                guessInput.style.borderColor = 'red';
+                notifyUser(`Wrong guess!   Try again! Your remaining guesses left is ${guessesLeft}`, 'red');}
         }
     }
 
@@ -62,5 +75,5 @@ function gameOver(won, msg){
     }
 
     guessBtn.value = 'Play Again';
-    guessBtn.className += 'play-again';
+    guessBtn.className = 'play-again';
 }
