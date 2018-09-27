@@ -9,7 +9,7 @@ const posts = [
         setTimeout(function(){
             posts.push(post);
             // resolve();
-            const error = false;
+            const error = false ;
             
             if (!error){
                 resolve();
