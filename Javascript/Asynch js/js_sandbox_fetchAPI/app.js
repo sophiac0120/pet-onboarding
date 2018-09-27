@@ -4,7 +4,7 @@ document.getElementById('button3').addEventListener('click', getExternal);
 
 const textDiv = document.getElementById('output');
 
-function getExternal(){
+/* function getExternal(){
     fetch('https://api.github.com/users').then(function(res){
         return res.json();
    })
@@ -18,8 +18,21 @@ function getExternal(){
    .catch(function(err){
        console.log(err);
    });  
+} */
+
+function getExternal(){
+    fetch('https://api.github.com/users').then(res => res.json())
+   .then(data => {
+       output = '';
+       data.forEach(function(user){
+           output += `<li>${user.login}</li>`
+       });
+       textDiv.innerHTML = output;
+   })
+   .catch(err => console.log(err));  
 }
-function getJSON(){
+
+/* function getJSON(){
     fetch('posts.json').then(function(res){
          return res.json();
     })
@@ -33,9 +46,21 @@ function getJSON(){
     .catch(function(err){
         console.log(err);
     });
+} */
+
+function getJSON(){
+    fetch('posts.json').then(res => res.json())
+    .then(data => {
+        output = '';
+        data.forEach(function(post){
+            output += `<li>${post.title}</li>`
+        });
+        textDiv.innerHTML = output;
+    })
+    .catch(err => console.log(err));
 }
 
-function getText(){
+/* function getText(){
     fetch('text.txt').then(function(res){
         return res.text();
     })
@@ -46,4 +71,13 @@ function getText(){
     .catch(function(err){
         console.log(err);
     });
-}
+} */
+
+function getText(){
+    fetch('text.txt').then(res => res.text())
+    .then((data) => {
+        console.log(data);
+        textDiv.innerHTML = data;
+    })
+    .catch(err => console.log(err));
+    };
