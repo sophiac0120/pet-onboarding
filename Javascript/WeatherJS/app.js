@@ -1,2 +1,8 @@
-// API Key: 3eaaffd4b4a015ce5f2f0eb6cf4a3201
+const weather = new Weather('Boston', 'MA');
+console.log(weather.city);
 
+weather.getWeather()
+    .then(results => {
+        console.log(results);
+    })
+    .catch(err => console.log(err));
