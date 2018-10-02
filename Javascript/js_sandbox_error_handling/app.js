@@ -1,21 +1,18 @@
-try {
-    myFunction();
-} catch(e){
-    console.log(e);
-    console.log(e.name);
-    console.log(e.message);
-    console.log(e instanceof TypeError);
-} finally {
-    console.log('Finally runs regardless of result')
-}
-
 let re;
+re = /^h/i;
+re = /d$/i;
 
-re = /hello/i;
-
-const result = re.exec('brad hello world'); 
-const result2 = re.exec('brad HELLO');
-
+const str = 'Hellod';
+const result = re.exec(str);
 console.log(result);
 
-console.log(result2);
+function reTest(re, str){
+    if (re.test(str)){
+        console.log(`${str} matches ${re.source}`);
+    }
+    else{
+        console.log(`${str} does not matches ${re.source}`);
+    }
+}
+
+reTest(re, str)
